@@ -17,7 +17,7 @@
 
 	&__nav {
 		margin-left: auto;
-		transition: all 0.3s linear;
+		transition: all 0.2s linear;
 
 		ul {
 			display: flex;
@@ -47,7 +47,7 @@
 			height: 2.4px;
 			background: $white-text;
 			position: relative;
-			transition: all 0.3s linear;
+			transition: all 0.2s linear;
 
 			&::before {
 				content: '';
@@ -55,8 +55,9 @@
 				height: 2.4px;
 				position: absolute;
 				left: 0;
+				transform: translateY(8px);
+				transition: all 0.2s linear;
 				background: $white-text;
-				animation: linear 0.3s before-anim-reverse forwards;
 			}
 
 			&::after {
@@ -66,7 +67,8 @@
 				position: absolute;
 				left: 0;
 				background: $white-text;
-				animation: linear 0.3s after-anim-reverse forwards;
+				transition: all 0.2s linear;
+				transform: translateY(-8px);
 			}
 		}
 
@@ -78,13 +80,11 @@
 				background: transparent;
 
 				&::before {
-					background: $white-text;
-					animation: linear 0.3s before-anim forwards;
+					transform: rotate(-45deg);
 				}
 
 				&::after {
-					background: $white-text;
-					animation: linear 0.3s after-anim forwards;
+					transform: rotate(45deg);
 				}
 			}
 		}

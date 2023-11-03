@@ -266,7 +266,7 @@ body {
 }
 .header__nav {
   margin-left: auto;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .header__nav ul {
   display: flex;
@@ -294,7 +294,7 @@ body {
   height: 2.4px;
   background: #fff;
   position: relative;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .header .hamburger span::before {
   content: "";
@@ -302,8 +302,9 @@ body {
   height: 2.4px;
   position: absolute;
   left: 0;
+  transform: translateY(8px);
+  transition: all 0.2s linear;
   background: #fff;
-  animation: linear 0.3s before-anim-reverse forwards;
 }
 .header .hamburger span::after {
   content: "";
@@ -312,7 +313,8 @@ body {
   position: absolute;
   left: 0;
   background: #fff;
-  animation: linear 0.3s after-anim-reverse forwards;
+  transition: all 0.2s linear;
+  transform: translateY(-8px);
 }
 .header .hamburger--active span {
   width: 25px;
@@ -321,12 +323,10 @@ body {
   background: transparent;
 }
 .header .hamburger--active span::before {
-  background: #fff;
-  animation: linear 0.3s before-anim forwards;
+  transform: rotate(-45deg);
 }
 .header .hamburger--active span::after {
-  background: #fff;
-  animation: linear 0.3s after-anim forwards;
+  transform: rotate(45deg);
 }
 
 @media (max-width: 576px) {
